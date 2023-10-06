@@ -17,7 +17,7 @@ export default function App() {
 
     console.log("lel!")
     try {
-      const response = await fetch(`http://localhost:3000/${searchBar.current.value}`, { mode: 'cors' });
+      const response = await fetch(`https://weather-app-back-end-0lvz.onrender.com/${searchBar.current.value}`, { mode: 'cors' });
       
       if(!response.ok) {
         throw new Error('HAHA!')
