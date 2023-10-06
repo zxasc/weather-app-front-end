@@ -15,13 +15,11 @@ export default function App() {
   const handleForm = async (e) => {
     e.preventDefault();
 
-    console.log("lel!")
     try {
       const response = await fetch(`https://weather-app-back-end-0lvz.onrender.com/${searchBar.current.value}`, { mode: 'cors' });
       
-      if(!response.ok) {
-        throw new Error('HAHA!')
-      }
+      // if(!response.ok) {
+      // }
 
       const data = await response.json();
       setWeatherInfo(data);
