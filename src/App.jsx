@@ -8,10 +8,6 @@ export default function App() {
   const [weatherInfo, setWeatherInfo] = useState(placeholder);
   const searchBar = useRef();
 
-  const handleSearch = (e) => {
-    console.log(searchBar.current.value)
-  };
-
   const handleForm = async (e) => {
     e.preventDefault();
 
@@ -38,7 +34,6 @@ export default function App() {
           ref={searchBar}
           type='search'
           placeholder='Katowice'
-          onChange={handleSearch}
         />
         <button type="submit"><img src="/icons/search.svg" alt="search" /></button>
       </form>
