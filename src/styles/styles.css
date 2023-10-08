@@ -25,9 +25,9 @@ section:last-of-type {
 }
 
 .search-form, section {
-  width: 90%;
+  width: 80%;
   max-width: 520px;
-  min-width: 350px;
+  min-width: 320px;
 }
 
 .search-form {
@@ -156,7 +156,41 @@ h4 {
 }
 
 @media only screen and (max-width: 480px) {
+  .current .sub-panel img {
+    width: 20px;
+  }
+  .current .sub-panel span {
+    font-size: 16px;
+  }
+  .forecast .cards-wrapper .card .time {
+    font-size: 18px;
+  }
+  .forecast .cards-wrapper .card .temperature {
+    font-size: 16px;
+  }
+  .forecast .cards-wrapper .card .temperature-night {
+    font-size: 16px;
+  }
+  .forecast .cards-wrapper .card .precipitation {
+    font-size: 12px;
+  }
+  .forecast .cards-wrapper .card img {
+    width: 28px;
+    height: 28px;
+  }
   .forecast .cards-wrapper .card:nth-of-type(6) {
     display: none;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */
