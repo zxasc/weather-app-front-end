@@ -13,10 +13,6 @@ export default function App() {
 
     try {
       const response = await fetch(`https://weather-app-back-end-0lvz.onrender.com/${searchBar.current.value}`, { mode: 'cors' });
-      
-      // if(!response.ok) {
-      // }
-
       const data = await response.json();
       setWeatherInfo(data);
     } catch(err) {
@@ -51,6 +47,10 @@ export default function App() {
         title={"Daily"}
         forecastWeather={weatherInfo.forecast.daily}
       />
+
+      <footer>
+        <a href="https://www.lechocki.com" rel='noopener'>www.lechocki.com</a>
+      </footer>
 
     </>
   )

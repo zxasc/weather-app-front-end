@@ -135,6 +135,10 @@ section:last-of-type {
   height: 36px;
 }
 
+footer {
+  margin-bottom: 45px;
+}
+
 h1, h2, h3, h4 {
   margin: 0;
 }
