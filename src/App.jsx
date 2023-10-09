@@ -91,6 +91,7 @@ export default function App() {
 
       <footer>
         <a href="https://www.lechocki.com" rel='noopener'>www.lechocki.com</a>
+        <p>PSA: If the app isn't working, please try refreshing it a few times, as my back-end instance spins down when inactive. Thanks!</p>
       </footer>
 
     </>
