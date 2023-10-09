@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+    --clr-backround: #f69f50;
+    --clr-font-main: #fff;
+    --clr-font-sub: #cfe0e0;
+}
 
 html, body, #root {
     margin: 0;
     padding: 0;
     min-height: 100dvh;
-    background-color:#000;
+    background-color: var(--clr-backround);
+    transition: background-color 0.5s ease-in;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Lato';
-    color: white;
+    color: var(--clr-font-main);
 }
 
 section:last-of-type {
@@ -22,7 +28,6 @@ section:last-of-type {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: #000;
     gap: 32px;
 }
 
@@ -43,16 +48,16 @@ section:last-of-type {
         background: none;
         border: none;
         font-size: 18px;
-        border-bottom: 2pt solid #696969;
+        border-bottom: 2pt solid var(--clr-font-sub);
         transition: all 0.2s ease-in;
 
         &:focus {
             outline: 0;
-            border-bottom: 2pt solid #fff;
+            border-bottom: 2pt solid var(--clr-font-main);
         }
 
         &::placeholder,&::-webkit-input-placeholder {
-            color: #696969;
+            color: var(--clr-font-sub);
             opacity: 1;
         }
     }
@@ -67,7 +72,7 @@ section:last-of-type {
         height: 24px;
 
         img {
-            filter: invert(42%) sepia(0%) saturate(0%) hue-rotate(187deg) brightness(94%) contrast(84%);
+            filter: brightness(0) saturate(100%) invert(99%) sepia(85%) saturate(182%) hue-rotate(141deg) brightness(93%) contrast(88%);
             transition: all 0.2s ease-in;
         }
 
@@ -138,16 +143,19 @@ section:last-of-type {
             }
             
             .temperature {
+                font-weight: 500;
                 font-size: 18px;
             }
             .temperature-night {
                 font-size: 18px;
-                color: #696969;
+                font-weight: 400;
+                color: var(--clr-font-main);
             }
 
             .precipitation {
                 font-size: 14px;
-                color: #696969;
+                font-weight: 400;
+                color: var(--clr-font-main);
             }
 
             .precipitation.amount {
