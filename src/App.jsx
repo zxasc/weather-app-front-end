@@ -3,7 +3,6 @@ import CurrentWeather from './components/CurrentWeather';
 import ForecastWeather from './components/ForecatsWeather';
 import placeholder from './placeholder.json'
 import './styles/styles.scss'
-//import variables from './styles/variables.module.scss'
 
 export default function App() {
   const [weatherInfo, setWeatherInfo] = useState(placeholder);
