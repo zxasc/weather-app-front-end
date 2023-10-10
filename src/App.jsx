@@ -18,8 +18,8 @@ export default function App() {
       "00406c", // 3
       "024270", // 4
       "01628d", // 5
-      "046f9b", // 6
-      "119ebc", // 7
+      "046f9b", // 6 
+      "119ebc", // 7 black font #373737
       "6ecfc8", // 8
       "71d3cb", // 9
       "a8ddbf", // 10
@@ -30,7 +30,7 @@ export default function App() {
       "f69f50", // 15
       "f5866b", // 16
       "da6d82", // 17
-      "a64e88", // 18
+      "a64e88", // 18 black font #373737, svgs: filter: invert(16%) sepia(0%) saturate(1281%) hue-rotate(162deg) brightness(102%) contrast(85%);
       "6c3384", // 19
       "29156a", // 20
       "1b2763", // 21
@@ -38,7 +38,17 @@ export default function App() {
       "040c3d" // 23
     ]
     const currentTime = Number(data.current.time.substring(0,2));
-    document.documentElement.style.setProperty('--clr-backround', `#${backgroundColors[currentTime]}`)
+    
+    document.documentElement.style.setProperty('--clr-backround', `#${backgroundColors[currentTime]}`);
+    if(currentTime > 6 && currentTime < 19) {
+      document.documentElement.style.setProperty('--filter-svg', 'invert(16%) sepia(0%) saturate(1281%) hue-rotate(162deg) brightness(102%) contrast(85%)');
+      document.documentElement.style.setProperty('--clr-font-main', '#373737');
+      document.documentElement.style.setProperty('--clr-font-sub', '#444444');
+    } else {
+      document.documentElement.style.setProperty('--filter-svg', 'invert(1)');
+      document.documentElement.style.setProperty('--clr-font-main', '#fff');
+      document.documentElement.style.setProperty('--clr-font-sub', '#cfe0e0');
+    }
   }
 
   const handleForm = async (e) => {
@@ -91,7 +101,7 @@ export default function App() {
 
       <footer>
         <a href="https://www.lechocki.com" rel='noopener'>www.lechocki.com</a>
-        <p>PSA: If the app isn't working, please try refreshing it a few times, as my back-end instance spins down when inactive. Thanks!</p>
+        <p>PSA: If the app isn't working, please give it some time, as my back-end instance spins down when inactive. Thanks!</p>
       </footer>
 
     </>

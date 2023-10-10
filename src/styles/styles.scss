@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 :root {
+    --filter-svg: invert(16%) sepia(0%) saturate(1281%) hue-rotate(162deg) brightness(102%) contrast(85%);
     --clr-backround: #f69f50;
-    --clr-font-main: #fff;
-    --clr-font-sub: #cfe0e0;
+    --clr-font-main: #373737;
+    --clr-font-sub: #444444;
 }
 
 html, body, #root {
@@ -72,19 +73,19 @@ section:last-of-type {
         height: 24px;
 
         img {
-            filter: brightness(0) saturate(100%) invert(99%) sepia(85%) saturate(182%) hue-rotate(141deg) brightness(93%) contrast(88%);
+            filter: var(--filter-svg);
             transition: all 0.2s ease-in;
         }
 
         &:hover {
             img {
-                filter: invert(1);
+                filter: var(--filter-svg);
             }
         }
 
         &:focus {
             img {
-                filter: invert(1);
+                filter: var(--filter-svg);
             }
         }
     }
@@ -116,7 +117,8 @@ section:last-of-type {
         }
 
         img {
-            filter: invert(1);
+            filter: var(--filter-svg);
+            transition: filter 0.2s ease-in;
             width: 22px;
         }
     }
@@ -163,7 +165,8 @@ section:last-of-type {
             }
 
             img {
-                filter: invert(1);
+                filter: var(--filter-svg);
+                transition: filter 0.2s ease-in;
                 width: 36px;
                 height: 36px;
             }
@@ -174,6 +177,10 @@ section:last-of-type {
 footer {
     margin-bottom: 45px;
     text-align: center;
+}
+
+h1,h2,h3,h4,span,p {
+    transition: color 0.2s ease-in;
 }
 
 h1,h2,h3,h4 {
